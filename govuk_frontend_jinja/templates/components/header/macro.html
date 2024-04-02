@@ -4,18 +4,18 @@
 <header class="govuk-header {{ params.classes if params.classes }}" role="banner" data-module="govuk-header"
         {%- for attribute, value in (params.attributes.items() if params.attributes else {}.items()) %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
-    <!-- <div class="govuk-header__logo">
+    <div class="govuk-header__logo">
       <a href="{{ params.homepageUrl | default('/') }}" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype-text">
           NotifyNL
         </span>
-        {% if (params.productName) %}
+        {#{% if (params.productName) %}
         <span class="govuk-header__product-name">
           {{ params.productName }}
         </span>
-        {% endif %}
+        {% endif %}#}
       </a>
-    </div> -->
+    </div>
     {% if params.serviceName or params.navigation  %}
     <div class="govuk-header__content">
     {% if params.serviceName %}
