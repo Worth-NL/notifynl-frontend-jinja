@@ -1,0 +1,25 @@
+From c758b0ee8b27e22bebce3bfcf125946bb8031950 Mon Sep 17 00:00:00 2001
+From: Julia Rudnyk <jrudnyk@worth.systems>
+Date: Tue, 22 Aug 2023 12:35:20 +0200
+Subject: [PATCH 2/6] Test
+
+---
+ govuk_frontend_jinja/templates/components/header/macro.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/govuk_frontend_jinja/templates/components/header/macro.html b/govuk_frontend_jinja/templates/components/header/macro.html
+index 28c22ef..207f9b1 100644
+--- a/govuk_frontend_jinja/templates/components/header/macro.html
++++ b/govuk_frontend_jinja/templates/components/header/macro.html
+@@ -9,7 +9,7 @@
+           </span>
+         {% if (params.productName) %}
+         <span class="govuk-header__product-name">
+-          {{ params.productName }}
++          777777777
+         </span>
+         {% endif %}
+       </a>
+-- 
+2.34.1
+

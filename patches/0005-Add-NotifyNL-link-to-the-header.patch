@@ -1,0 +1,39 @@
+From 416d9a581dd517305dbdaa027ce85c31864ba61a Mon Sep 17 00:00:00 2001
+From: Julia Rudnyk <jrudnyk@worth.systems>
+Date: Tue, 22 Aug 2023 13:00:32 +0200
+Subject: [PATCH 5/6] Add NotifyNL link to the header
+
+---
+ .../templates/components/header/macro.html                | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/govuk_frontend_jinja/templates/components/header/macro.html b/govuk_frontend_jinja/templates/components/header/macro.html
+index 4f48231..11a65a3 100644
+--- a/govuk_frontend_jinja/templates/components/header/macro.html
++++ b/govuk_frontend_jinja/templates/components/header/macro.html
+@@ -2,18 +2,18 @@
+ <header class="govuk-header {{ params.classes if params.classes }}" role="banner" data-module="govuk-header"
+         {%- for attribute, value in (params.attributes.items() if params.attributes else {}.items()) %} {{attribute}}="{{value}}"{% endfor %}>
+   <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
+-    <!--<div class="govuk-header__logo">
++    <div class="govuk-header__logo">
+       <a href="{{ params.homepageUrl | default('/') }}" class="govuk-header__link govuk-header__link--homepage">
+           <span class="govuk-header__logotype-text">
+             NotifyNL
+           </span>
+-        {% if (params.productName) %}
++        {#{% if (params.productName) %}
+         <span class="govuk-header__product-name">
+           {{ params.productName }}
+         </span>
+-        {% endif %}
++        {% endif %}#}
+       </a>
+-    </div>-->
++    </div>
+     {% if params.serviceName or params.navigation  %}
+     <div class="govuk-header__content">
+     {% if params.serviceName %}
+-- 
+2.34.1
+
