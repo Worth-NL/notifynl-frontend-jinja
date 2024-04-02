@@ -1,0 +1,22 @@
+From 0efe6d44940f38a01a25bae2afcbd726af6cb084 Mon Sep 17 00:00:00 2001
+From: Julia Rudnyk <jrudnyk@worth.systems>
+Date: Tue, 22 Aug 2023 15:23:53 +0200
+Subject: [PATCH 6/6] Add div for Dutch logo above the header
+
+---
+ govuk_frontend_jinja/templates/components/header/macro.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/govuk_frontend_jinja/templates/components/header/macro.html b/govuk_frontend_jinja/templates/components/header/macro.html
+index 11a65a3..a73789a 100644
+--- a/govuk_frontend_jinja/templates/components/header/macro.html
++++ b/govuk_frontend_jinja/templates/components/header/macro.html
+@@ -1,4 +1,5 @@
+ {% macro govukHeader(params) %}
++<div class="dutch-logo-above-header"></div>
+ <header class="govuk-header {{ params.classes if params.classes }}" role="banner" data-module="govuk-header"
+         {%- for attribute, value in (params.attributes.items() if params.attributes else {}.items()) %} {{attribute}}="{{value}}"{% endfor %}>
+   <div class="govuk-header__container {{ params.containerClasses | default('govuk-width-container') }}">
+-- 
+2.34.1
+
